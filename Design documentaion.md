@@ -67,9 +67,8 @@ Comparators are important in analog-to-digital conversion and can also be used i
 
 The StrongARM comparator consists of differential input transistors, latch transistors, reset transistors, and a clock-controlled tail transistor.
 
-**[Insert Figure 1: StrongARM comparator reference circuit]**
+<img width="705" height="663" alt="Screenshot 2026-10-26 202334" src="https://github.com/user-attachments/assets/6f27aa4a-882c-400d-91f9-3536eb004cb6" />
 
-**[Insert Figure 2: Designed transistor-level schematic from Cadence Virtuoso]**
 
 ### 5.1 Transistor Functions
 
@@ -141,13 +140,18 @@ For the input condition Vin+ > Vin−, the differential pair initiates an imbala
 - M4 and M4′ = OFF
 - Regenerative feedback is active
 
-**[Insert Figure 4: Evaluation phase waveform]**
 
 ## 7. Simulation and Performance Analysis
+
+<img width="707" height="502" alt="Screenshot 2026-10-26 203006" src="https://github.com/user-attachments/assets/d4a53ff6-5bf7-4e29-b046-3af32d9d0e55" />
+
 
 The circuit was simulated in Cadence Virtuoso to evaluate its dynamic behavior and performance.
 
 ### 7.1 Transient Analysis
+
+<img width="710" height="416" alt="Screenshot 2026-10-26 203208" src="https://github.com/user-attachments/assets/172d8c30-c734-4b69-9d13-5dac30254799" />
+
 
 Transient analysis was performed to verify the comparator's operation.
 
@@ -162,9 +166,11 @@ The report records the following input conditions:
 
 The corresponding output transitions were reported to confirm comparison around the reference level.
 
-**[Insert Figure 5: Transient response waveform from Cadence Virtuoso]**
 
 ### 7.2 Propagation Delay Analysis
+
+<img width="599" height="214" alt="image" src="https://github.com/user-attachments/assets/b917ea54-18ce-4934-a884-ecd95afe7177" />
+
 
 Propagation delay was evaluated to measure the time taken by the comparator to resolve the input and produce a valid output.
 
@@ -172,14 +178,13 @@ The delay was measured using the `delay()` function in the Cadence Calculator. T
 
 **Reported pre-layout propagation delay: 87.99 ps**
 
-**[Insert Figure 6: Propagation delay measurement and waveform]**
 
 ### 7.3 Power Analysis
 
 The supply current drawn from the VDD source was monitored during transient simulation. The average current was calculated using the `average()` function in the Cadence Calculator.
 
 The report gives the following pre-layout values:
-
+<img width="599" height="214" alt="image" src="https://github.com/user-attachments/assets/b917ea54-18ce-4934-a884-ecd95afe7177" />
 - Average supply current: 10.302 µA
 - Supply voltage: 1.8 V
 - Average power consumption: approximately 18.5 µW
@@ -190,17 +195,9 @@ P = VDD × Iavg
 
 The average power depends on the applied input stimulus, clock activity, and simulation interval.
 
-**[Insert Figure 7: Supply current and average power analysis]**
-
-### 7.4 Offset Analysis
-
-Input-referred offset voltage is an important comparator parameter because it affects the minimum differential input required to determine the output reliably.
-
-Potential sources of offset include transistor mismatch, threshold-voltage variation, and process-related non-idealities. Careful transistor sizing, symmetric layout, and device matching are common techniques used to reduce mismatch-related effects.
-
-The report discusses offset analysis but does not provide a numerical measured offset value. Therefore, no numerical offset result is claimed here.
 
 ## 8. Physical Layout Design
+<img width="675" height="614" alt="Screenshot 2026-10-26 203338" src="https://github.com/user-attachments/assets/7d2eaefe-8332-4cd5-840a-bee8856c9a29" />
 
 The comparator layout was implemented using Cadence Virtuoso following standard CMOS layout practices.
 
@@ -213,7 +210,7 @@ The layout considerations documented in the project include:
 
 Symmetric placement and routing are important considerations for matching the differential branches.
 
-**[Insert Figure 8: Completed StrongARM comparator layout]**
+
 
 ## 9. Physical Verification
 
@@ -223,15 +220,16 @@ DRC verification was performed after completing the layout. The design was check
 
 The report records **zero DRC violations**.
 
-**[Insert Figure 9: DRC verification result]**
+<img width="616" height="395" alt="Screenshot 2026-10-26 203551" src="https://github.com/user-attachments/assets/4af2a2ce-df82-4304-9a06-da239966603f" />
+
 
 ### 9.2 Layout Versus Schematic (LVS)
 
 LVS verification was performed to compare the physical layout against the schematic netlist. The verification checks device correspondence and circuit connectivity.
 
 The report records a **successful LVS match**.
+<img width="593" height="526" alt="Screenshot 2026-10-26 203612" src="https://github.com/user-attachments/assets/adfb996a-9efe-4ad2-a6e6-84c71b149048" />
 
-**[Insert Figure 10: LVS verification result]**
 
 ## 10. Post-Layout Analysis
 
@@ -250,10 +248,11 @@ The report states that the comparator continued to operate correctly after extra
 **Note:** The original report contains inconsistent post-layout delay values: 87.2 ps in the discussion and 88.2 ps in the comparison table. The correct value must be confirmed from the original simulation results before final publication.
 
 The reported average current and power increase slightly after parasitic extraction. Such differences may arise from the additional resistance and capacitance introduced by the physical implementation.
+<img width="714" height="466" alt="image" src="https://github.com/user-attachments/assets/02b083ae-d3a9-4d9d-bea4-ccbfd0c26869" />
 
-**[Insert Figure 11: Post-layout simulation waveform]**
 
-**[Insert Figure 12: Pre-layout versus post-layout transient response comparison]**
+<img width="670" height="276" alt="image" src="https://github.com/user-attachments/assets/becd893a-aef9-4136-bcf9-0fb056d9cceb" />
+
 
 ## 11. Results Summary
 
