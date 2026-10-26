@@ -256,21 +256,18 @@ The reported average current and power increase slightly after parasitic extract
 
 ## 11. Results Summary
 
-| Specification | Reported result |
-|---|---|
-| Technology node | 180 nm CMOS |
-| Architecture | StrongARM latch comparator |
-| Supply voltage | 1.8 V |
-| Reference voltage | 900 mV |
-| Input signal | Sinusoidal |
-| Pre-layout propagation delay | 87.99 ps |
-| Pre-layout average current | 10.302 µA |
-| Pre-layout average power | 18.5 µW |
-| DRC status | Passed; zero reported violations |
-| LVS status | Successful match |
-| Post-layout verification | Reported successful |
-
-These values are simulation results reported for this particular design and testbench. They are not silicon measurement results.
+| Specification | Pre-Layout | Post-Layout |
+|---|---:|---:|
+| Technology node | 180 nm CMOS | 180 nm CMOS |
+| Supply voltage | 1.8 V | 1.8 V |
+| Reference voltage | 900 mV | 900 mV |
+| Average current | 10.302 µA | 10.44 µA |
+| Average power | 18.5 µW | 18.6 µW |
+| Propagation delay | 87.99 ps | To be confirmed |
+| DRC status | — | Passed; zero reported violations |
+| LVS status | — | Successful match |
+| Parasitic extraction | Not included | Included |
+| Functional verification | Successful | Successful |
 
 ## 12. Conclusion
 
