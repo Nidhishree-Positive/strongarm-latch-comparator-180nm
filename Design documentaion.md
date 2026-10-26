@@ -263,7 +263,7 @@ The reported average current and power increase slightly after parasitic extract
 | Reference voltage | 900 mV | 900 mV |
 | Average current | 10.302 µA | 10.44 µA |
 | Average power | 18.5 µW | 18.6 µW |
-| Propagation delay | 87.99 ps | To be confirmed |
+| Propagation delay | 87.99 ps |88.2 ps |
 | DRC status | — | Passed; zero reported violations |
 | LVS status | — | Successful match |
 | Parasitic extraction | Not included | Included |
