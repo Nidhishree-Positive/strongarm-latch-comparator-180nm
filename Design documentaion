@@ -67,7 +67,9 @@ Comparators are important in analog-to-digital conversion and can also be used i
 
 The StrongARM comparator consists of differential input transistors, latch transistors, reset transistors, and a clock-controlled tail transistor.
 
-C:\Users\Nidhishree\Downloads\Screenshot 2026-10-26 202334.png
+**[Insert Figure 1: StrongARM comparator reference circuit]**
+
+**[Insert Figure 2: Designed transistor-level schematic from Cadence Virtuoso]**
 
 ### 5.1 Transistor Functions
 
